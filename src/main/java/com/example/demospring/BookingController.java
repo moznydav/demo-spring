@@ -23,7 +23,7 @@ public class BookingController {
 
     @RequestMapping(value = "/affordable/{price}", method = RequestMethod.GET)
     public List<HotelBooking> getAffordable(@PathVariable double price){
-        return bookingRepository.findByPriceNightLessThan(price);
+        return bookingRepository.findByPricePerNightLessThan(price);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
